@@ -8,6 +8,7 @@ from django.utils.safestring import mark_safe
 @admin.register(Schedule)
 class SheduleAdmin(admin.ModelAdmin):
     list_display = ('name', 'teacher', 'startTime', 'endTime')
+    save_as = True
 
 
 @admin.register(Teacher)

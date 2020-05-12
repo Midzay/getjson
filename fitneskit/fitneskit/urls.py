@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('schedule/',include('schedule.urls')),
+    path('schedule/get_group_lessons_v2/1/',include('schedule.urls')),
 ]
