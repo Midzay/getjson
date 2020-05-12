@@ -10,8 +10,8 @@ class TeacherSerializer(serializers.ModelSerializer):
 
 class ScheduleSerializer(serializers.ModelSerializer):
     teacher_v2 = TeacherSerializer(read_only=True)
-    startTime = serializers.TimeField(format="%H:%M")
-    endTime = serializers.TimeField(format="%H:%M")
+    startTime = serializers.TimeField(format="%H.%M")
+    endTime = serializers.TimeField(format="%H.%M")
     class Meta:
         model = Schedule
         exclude = ['id']
