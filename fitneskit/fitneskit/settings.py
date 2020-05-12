@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'schedule'
-    ,
+    'schedule',
+    'colorfield',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+DJANGO_ROOT = os.path.dirname(os.path.abspath(__file__))
+SITE_ROOT = os.path.dirname(DJANGO_ROOT)
+STATIC_ROOT = os.path.normpath(os.path.join(SITE_ROOT, 'staticfiles'))
 
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 
