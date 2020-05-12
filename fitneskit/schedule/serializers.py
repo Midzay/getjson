@@ -5,7 +5,7 @@ from .models import Schedule, Teacher
 class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
-        fields = '__all__'
+        exclude = ['id']
 
 
 class ScheduleSerializer(serializers.ModelSerializer):
