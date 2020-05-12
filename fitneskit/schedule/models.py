@@ -14,10 +14,7 @@ WEEKDAY = [
     (7, 'Sunday'),
 ]
 
-AVAILABILITY = [
-    (5, 'YES'),
-    (-1, 'NO')
-]
+
 
 class Teacher(models.Model):
     short_name = models.CharField(max_length=50)
@@ -31,6 +28,10 @@ class Teacher(models.Model):
 
     def natural_key(self):
         return ({'short_name': self.short_name, 'name': self.name})
+    
+    def __str__(self):
+        return self.name
+
 
 
 class Schedule(models.Model):
@@ -48,7 +49,7 @@ class Schedule(models.Model):
     teacher_v2 = models.ForeignKey(
         Teacher, on_delete=models.SET_NULL, null=True)
     color = ColorField(default='#FFC0CB')
-    availability = models.IntegerField(choices=AVAILABILITY)
+    availability = models.IntegerField()
 
     class Meta:
         verbose_name = "Schedule"
