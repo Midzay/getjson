@@ -7,7 +7,7 @@ chardet==3.0.4
 Django==3.0.6
 django-colorfield==0.3.0
 django-storages==1.9.1
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 dropbox==10.1.2
 idna==2.9
 isort==4.3.21
